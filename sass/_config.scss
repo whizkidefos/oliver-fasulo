@@ -1,0 +1,46 @@
+$bg-color: #15202B;
+$accent-color: #1A91DA;
+$text-color: aliceblue;
+$mobile: 800px;
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background-color: lighten($bg-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+
+@mixin mobile { 
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin transition {
+    transition: all 0.4s ease-in-out;
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}

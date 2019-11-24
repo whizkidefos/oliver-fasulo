@@ -1,0 +1,141 @@
+.menu-btn {
+    position: absolute;
+    z-index: 30;
+    right: 3rem;
+    top: 2rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    @include transition;
+    
+    &-burger {
+        position: absolute;
+        right: 0;
+        top: 1rem;
+        width: 28px;
+        height: 3px;
+        background: $text-color;
+        @include transition;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            width: 28px;
+            height: 3px;
+            background-color: $text-color;
+            @include transition;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            width: 28px;
+            height: 3px;
+            background-color: $text-color;
+            @include transition;
+        }
+        
+        &.open {
+            transform: rotate(720deg);
+            background: transparent;
+            
+            &::before {
+                transform: rotate(45deg) translate(5px, 8px);
+            }
+            
+            &::after {
+                transform: rotate(-45deg) translate(3px, -7px);
+                width: 28px;
+            }
+        }
+    }
+}
+
+.brand {
+    position: fixed;
+    top: 2rem;
+    z-index: 50;
+    &-logo {
+        color: $accent-color;
+        font-size: 2.5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        padding: 2rem;
+        @include transition;
+        
+        &:hover {
+            color: $text-color;
+        }
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0.95;
+    visibility: visible;
+    z-index: 20;
+    
+    &.open {
+        visibility: visible;
+    }
+    
+    .menu-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        background-color: $bg-color;
+        list-style: none;
+        padding-right: 1rem;
+        transform: translateY(-100%);
+        @include transition;
+        
+        &.open {
+            transform: translateY(0);
+        }
+        
+        &-item {
+            transform: translateX(100vw);
+            @include transition;
+            
+            &.open {
+                transform: translateX(0);
+            }
+            &.active {
+                color: $accent-color;
+            }
+        }
+        
+        &-link {
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 400;
+            @include transition;
+            
+            &:hover {
+                color: $text-color;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .menu-nav-item:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s) + 0.15s;
+    }
+}
+
+
+
+
+
+

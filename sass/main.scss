@@ -1,0 +1,87 @@
+@import 'config';
+@import 'animations';
+@import 'home';
+@import 'navigation';
+@import 'about';
+@import 'projects';
+@import 'contact';
+@import 'responsive';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 10px;
+    background-color: $bg-color;
+    color: $text-color;
+    height: 100vh;
+    line-height: 1;
+    font-smoothing: antialiased;
+}
+
+.light {
+    @include theme($light-theme: true);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-color;
+}
+
+.text-secondary {
+    color: $accent-color;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.social-icons {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 10;
+    
+    a {
+        padding: 0.4rem;
+        @include transition;
+        
+        &:hover {
+            color: $text-color;
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0.4rem;
+    right: 1rem;
+    
+    p {
+        font-size: 1.2rem;
+    }
+}

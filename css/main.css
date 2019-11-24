@@ -1,0 +1,494 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../img/oliver-fasulo.jpg) no-repeat center top/cover;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/oliver-fasulo.jpg) no-repeat center top/cover;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/oliver-fasulo.jpg) no-repeat center top/cover;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/oliver-fasulo.jpg) no-repeat center top/cover; }
+  .home-name {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid white; }
+    .home-name-last {
+      color: #1A91DA; }
+  .home h2 {
+    font-size: 2rem; }
+  .home h3 {
+    font-size: 1.5rem;
+    margin-top: 1.1rem; }
+
+.menu-btn {
+  position: absolute;
+  z-index: 30;
+  right: 3rem;
+  top: 2rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+  .menu-btn-burger {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    width: 28px;
+    height: 3px;
+    background: aliceblue;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    .menu-btn-burger::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      width: 28px;
+      height: 3px;
+      background-color: aliceblue;
+      -webkit-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+    .menu-btn-burger::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      width: 28px;
+      height: 3px;
+      background-color: aliceblue;
+      -webkit-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+    .menu-btn-burger.open {
+      -webkit-transform: rotate(720deg);
+      -ms-transform: rotate(720deg);
+      transform: rotate(720deg);
+      background: transparent; }
+      .menu-btn-burger.open::before {
+        -webkit-transform: rotate(45deg) translate(5px, 8px);
+        -ms-transform: rotate(45deg) translate(5px, 8px);
+        transform: rotate(45deg) translate(5px, 8px); }
+      .menu-btn-burger.open::after {
+        -webkit-transform: rotate(-45deg) translate(3px, -7px);
+        -ms-transform: rotate(-45deg) translate(3px, -7px);
+        transform: rotate(-45deg) translate(3px, -7px);
+        width: 28px; }
+
+.brand {
+  position: fixed;
+  top: 2rem;
+  z-index: 50; }
+  .brand-logo {
+    color: #1A91DA;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 2rem;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    .brand-logo:hover {
+      color: aliceblue; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.95;
+  visibility: visible;
+  z-index: 20; }
+  nav.open {
+    visibility: visible; }
+  nav .menu-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #15202B;
+    list-style: none;
+    padding-right: 1rem;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    nav .menu-nav.open {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0); }
+    nav .menu-nav-item {
+      -webkit-transform: translateX(100vw);
+      -ms-transform: translateX(100vw);
+      transform: translateX(100vw);
+      -webkit-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+      nav .menu-nav-item.open {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0); }
+      nav .menu-nav-item.active {
+        color: #1A91DA; }
+    nav .menu-nav-link {
+      display: inline-block;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: 400;
+      -webkit-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+      nav .menu-nav-link:hover {
+        color: aliceblue;
+        letter-spacing: 1px; }
+
+.menu-nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s; }
+
+.menu-nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+  -o-transition-delay: 0.35s;
+  transition-delay: 0.35s; }
+
+.menu-nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+  -o-transition-delay: 0.45s;
+  transition-delay: 0.45s; }
+
+.menu-nav-item:nth-child(4) {
+  -webkit-transition-delay: 0.55s;
+  -o-transition-delay: 0.55s;
+  transition-delay: 0.55s; }
+
+.about {
+  padding-bottom: 2rem; }
+  .about-bio-image {
+    height: 50vh;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../img/oliver-fasulo.jpg) no-repeat center top/cover;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/oliver-fasulo.jpg) no-repeat center top/cover;
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/oliver-fasulo.jpg) no-repeat center top/cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/oliver-fasulo.jpg) no-repeat center top/cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    .about-bio-image h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      padding-bottom: 1rem; }
+    .about-bio-image p {
+      margin-bottom: 2rem;
+      width: 80%;
+      text-align: center;
+      font-size: 1.5rem; }
+  .about .social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .about footer {
+    -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+    -ms-transform: rotate(90deg) translate(-3rem, -5rem);
+    transform: rotate(90deg) translate(-3rem, -5rem);
+    margin-bottom: 5rem;
+    font-weight: 300; }
+
+.jobs {
+  width: 60vw;
+  margin: 3rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem; }
+  .jobs-job {
+    background: #263a4d;
+    padding: 0.8rem;
+    border-bottom: 3px solid #1A91DA; }
+    .jobs-job h2, .jobs-job h3 {
+      margin: 0.5rem 0;
+      font-size: 1.5rem; }
+    .jobs-job h6 {
+      margin: 0.3rem 0;
+      font-size: 1.3rem; }
+    .jobs-job p {
+      font-size: 1.2rem; }
+
+.projects {
+  padding-bottom: 2rem; }
+  .projects-bio-image {
+    height: 50vh;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../img/design-projects.jpg) no-repeat center top/cover;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/design-projects.jpg) no-repeat center top/cover;
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/design-projects.jpg) no-repeat center top/cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/design-projects.jpg) no-repeat center top/cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    .projects-bio-image h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      padding-bottom: 2rem; }
+  .projects .social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .projects footer {
+    -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+    -ms-transform: rotate(90deg) translate(-3rem, -5rem);
+    transform: rotate(90deg) translate(-3rem, -5rem);
+    margin-bottom: 5rem;
+    font-weight: 300; }
+
+.portfolio {
+  width: 60vw;
+  margin: 3rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem; }
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 10; }
+    .portfolio-item img {
+      width: 100%; }
+    .portfolio-item::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: #1A91DA;
+      opacity: 0;
+      -webkit-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+    .portfolio-item:hover::after {
+      opacity: 0.9;
+      top: 0; }
+    .portfolio-item:hover .portfolio-btn {
+      opacity: 1; }
+  .portfolio-buttons {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; }
+  .portfolio-btn {
+    font-size: 1.5rem;
+    color: aliceblue;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    .portfolio-btn:hover {
+      color: #15202B; }
+
+.contact {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  background: #15202B; }
+  .contact h2 {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1A91DA; }
+
+.contact-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  font-size: 1.5rem;
+  margin: 2rem 0; }
+  .contact-list h3 {
+    margin-bottom: 1rem; }
+
+.contact-email, .contact-phone, .contact-address {
+  border: 1px solid #1A91DA;
+  padding: 2rem; }
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden; }
+  .nav {
+    visibility: visible; }
+    .nav .menu-nav {
+      display: block;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+      text-align: right;
+      margin-right: 2rem; }
+      .nav .menu-nav-item {
+        display: inline;
+        padding-right: 1.5rem; }
+      .nav .menu-nav-link {
+        font-size: 1.5rem; }
+  .about .text-secondary {
+    font-size: 2.5rem; }
+  .about-bio-image {
+    height: 60vh;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../img/oliver-fasulo-about.jpg) no-repeat center/cover;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/oliver-fasulo-about.jpg) no-repeat center/cover;
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/oliver-fasulo-about.jpg) no-repeat center/cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/oliver-fasulo-about.jpg) no-repeat center/cover; }
+    .about-bio-image p {
+      width: 60%;
+      line-height: 1.2; }
+  .about p {
+    font-size: 1.5rem;
+    padding-bottom: 2rem; }
+  .projects-bio-image {
+    height: 40vh; }
+  .portfolio {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr); }
+  .text-secondary {
+    font-size: 3rem; }
+  .contact-list {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem; } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 10px;
+  background-color: #15202B;
+  color: aliceblue;
+  height: 100vh;
+  line-height: 1;
+  font-smoothing: antialiased; }
+
+.light {
+  background-color: white;
+  color: black; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+h1, h2, h3, h4 {
+  font-weight: 400; }
+
+a {
+  text-decoration: none;
+  color: #1A91DA; }
+
+.text-secondary {
+  color: #1A91DA; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem; }
+
+main {
+  height: 100%;
+  width: 100%; }
+
+.social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 10; }
+  .social-icons a {
+    padding: 0.4rem;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    .social-icons a:hover {
+      color: aliceblue; }
+
+footer {
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem; }
+  footer p {
+    font-size: 1.2rem; }

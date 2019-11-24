@@ -1,0 +1,63 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+    
+    .nav {
+        visibility: visible;
+        
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            background: transparent;
+            text-align: right;
+            margin-right: 2rem;
+            
+            &-item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+            &-link {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+    .about .text-secondary {
+        font-size: 2.5rem;
+    }
+    
+    .about-bio-image {
+        height: 60vh;
+        width: 100%;
+        background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(../img/oliver-fasulo-about.jpg) no-repeat center / cover;
+        
+        p {
+            width: 60%;
+            line-height: 1.2;
+        }
+    }
+    .about p {
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    
+    .projects {
+        &-bio-image {
+            height: 40vh;
+        }
+    }
+    
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .text-secondary {
+        font-size: 3rem;
+    }
+    
+    .contact-list {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem;
+    }
+}
